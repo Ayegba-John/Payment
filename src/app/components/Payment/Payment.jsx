@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import styles from "./Payment.module.css";
+
 const PaymentForm = () => {
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
@@ -21,10 +23,10 @@ const PaymentForm = () => {
   };
 
   return (
-    <div className="payment-form">
+    <div className={styles.payment_form}>
       <h2>Payment Details</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className={styles.form_group}>
           <label>Card Number</label>
           <input
             type="text"
@@ -34,7 +36,7 @@ const PaymentForm = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles.form_group}>
           <label>Expiry Date</label>
           <input
             type="text"
@@ -44,7 +46,7 @@ const PaymentForm = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles.form_group}>
           <label>CVV</label>
           <input
             type="text"
@@ -54,7 +56,7 @@ const PaymentForm = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles.form_group}>
           <label>Card Holder Name</label>
           <input
             type="text"
@@ -64,7 +66,7 @@ const PaymentForm = () => {
             required
           />
         </div>
-        <button type="submit" className="submit-button">
+        <button type="submit" className={styles.submit_button}>
           Pay Now
         </button>
       </form>
